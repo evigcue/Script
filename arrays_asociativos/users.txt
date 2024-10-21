@@ -1,1 +1,6 @@
-usu:sudo:usu:bash
+usu:sudo:/home/usu:bash
+juan:admin:/home/juan:/bin/bash
+maria:ventas:/home/maria:/bin/sh
+carlos:soporte:/home/carlos:/bin/bash
+ana:recursos:/home/ana:/bin/zsh
+pedro:marketing:/home/pedro:/bin/bash

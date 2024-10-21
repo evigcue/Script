@@ -1,13 +1,18 @@
 #!/bin/bash
 
-read -rp "Introduce hasta qué número es el sumatorio: " n
-
 function sumatorio (){
-    if [ $n -eq 1 ]; then
+    local num=$1
+    if [ $num -eq 1 ]; then
         echo "1"
+    elif [ $num -eq 0 ]; then
+        echo "0"
     else
-        echo sumatorio $(( "$n" + $(sumatorio $(( "$n" -1 ))) ))
+        echo sumatorio $(( $num + $(sumatorio $(( $num - 1 ))) ))
     fi
 }
 
-sumatorio "$n"
+read -p "Introduce hasta qué número es el sumatorio: " n
+
+rdo=$(sumatorio $n)
+
+echo "El sumatorio de $n es $rdo"
