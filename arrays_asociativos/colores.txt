@@ -1,8 +1,9 @@
-verde:#59f281;
-verdepuro:#00ff00;
-amarillo:#ffff00;
-rojopuro:#ff0000;
-rosa:#ff00ff;
-azulpuro:#0000ff;
-azulverdoso:#00ffff;
-morado:#8e44ad;
+verde:#59f281
+verdepuro:#00ff00
+amarillo:#ffff00
+rojopuro:#ff0000
+rosa:#ff00ff
+azulpuro:#0000ff
+azulverdoso:#00ffff
+morado:#8e44ad
+:
