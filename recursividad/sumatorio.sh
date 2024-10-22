@@ -13,6 +13,6 @@ function sumatorio (){
 
 read -p "Introduce hasta qué número es el sumatorio: " n
 
-rdo=$(sumatorio $n)
+rdo=$(sumatorio "$n")
 
 echo "El sumatorio de $n es $rdo"
