@@ -62,6 +62,7 @@ function create_user {
 function modify_user {
     read -rp "Introduce el nombre de usuario a modificar: " nombre
 
+    # Si la cadena está vacía devuelve true
     if [ -z "${usuarios[$nombre,uid]}" ]; then
         echo "El usuario $nombre no existe."
         # shellcheck disable=SC2162
@@ -88,6 +89,8 @@ function modify_user {
 # Borrar un usuario
 function delete_user {
     read -rp "Introduce el nombre de usuario a borrar: " nombre
+    
+    # Si la cadena está vacía devuelve true
     if [ -z "${usuarios[$nombre,uid]}" ]; then
         echo "El usuario $nombre no existe."
         echo

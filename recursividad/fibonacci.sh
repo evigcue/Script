@@ -12,15 +12,8 @@ fibonacci() {
     fi
 }
 
-# Función para imprimir los primeros n valores de la sucesión de Fibonacci
-imprimir_fibonacci() {
-    local n=$1
-    for (( i=0; i<n; i++ )); do
-        fibonacci $i
-    done
-}
-
 read -p "Ingrese un número: " n
 
+n=$(( ( n % 16 ) + 5 ))
 # Llamamos a la función para imprimir los primeros n valores
-imprimir_fibonacci $n
+fibonacci $n
