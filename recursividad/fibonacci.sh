@@ -1,19 +1,27 @@
 #!/bin/bash
 
-# Función recursiva para calcular el n-ésimo número de Fibonacci
-fibonacci() {
+function fibonacci {
     local n=$1
-    if [ "$n" -le 0 ]; then
+
+    # Lo primero será especificar los casos base
+    if [ $n -eq 0 ]; then
         echo 0
-    elif [ "$n" -eq 1 ]; then
+    elif [ $n -eq 1 ]; then
         echo 1
+    elif [ $n -lt 0 ]; then
+        echo "Fibonacci solo comprende números positivos"
     else
-        echo $(( $(fibonacci $(( n - 1 ))) + $(fibonacci $(( n - 2 ))) ))
+        echo $(( $(fibonacci $(( $n - 1 ))) + $(fibonacci $(( $n - 2 ))) ))
     fi
 }
 
-read -p "Ingrese un número: " n
+read -p "¿Hasta qué valor de fibonacci quieres?: " n
 
-n=$(( ( n % 16 ) + 5 ))
-# Llamamos a la función para imprimir los primeros n valores
-fibonacci $n
+# Recorremos los valores de Fibonacci hasta el pedido
+# El recorrer no funciona, por eso solo mostraré el valor pedido
+# Da error en i<=n
+for (( i=0; i<=$n; i++ )); do
+   fibonacci $i
+done
+
+# Otra opción válida para el for es for i in $(seq 0 $n) que me lo hace en la secuencia de 0 a n.
