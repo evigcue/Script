@@ -10,11 +10,8 @@ function suma {
 }
 
 function resta {
-    local n1
-    local n2
-
-    read -rp "Deme el primer número: " n1
-    read -rp "Deme el segundo número: " n2
+    local n1=$1
+    local n2=$2
 
     local rdo=$(( n1 - n2 ))
 

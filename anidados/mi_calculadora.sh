@@ -4,8 +4,9 @@ source funciones_math.sh
 
 clear
 
-num1=$1
-num2=$2
+func=$1
+num1=$2
+num2=$3
 
 function menu {
     while true; do
@@ -18,9 +19,9 @@ function menu {
         read -rp "Elige una opción: " opcion
 
         case $opcion in
-            1) suma $num1 $num2
+            1) suma
                 echo ;;
-            2) resta $num1 $num2
+            2) resta 
                 echo ;;
             3) multiplica 
                 echo ;;
