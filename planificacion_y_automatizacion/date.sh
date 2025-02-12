@@ -6,7 +6,5 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# Apagamos el equipo
-shutdown now "Apagando el equipo" >> /var/log/shutdown.log
-
-echo "El equipo se ha apagado." >> /var/log/shutdown.log
+# Escribimos la fecha y hora en un archivo
+date +"%Y-%m-%d %H:%M:%S" >> ./tarea_programada.txt

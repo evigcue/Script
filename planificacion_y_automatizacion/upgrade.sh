@@ -6,7 +6,6 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# Apagamos el equipo
-shutdown now "Apagando el equipo" >> /var/log/shutdown.log
+# Actualizamos los paquetes
+apt-get update -y && apt-get upgrade -y
 
-echo "El equipo se ha apagado." >> /var/log/shutdown.log

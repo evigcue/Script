@@ -6,7 +6,10 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# Apagamos el equipo
-shutdown now "Apagando el equipo" >> /var/log/shutdown.log
+# Guardamos variables para después
 
-echo "El equipo se ha apagado." >> /var/log/shutdown.log
+date=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Comprobamos los usuarios
+
+who > /tmp/usuarios_"$date".txt
